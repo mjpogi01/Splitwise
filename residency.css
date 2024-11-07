@@ -1,0 +1,134 @@
+/* Full-Screen Background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzk0OXE5Mnp2OGI1OTdtdHFiYXVpb2M0ZHlqdGw5OGNsYnJpZDQzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Residency Container with stretched background image */
+.residency-container {
+    width: 90%; /* Make the container width more flexible */
+    max-width: 700px; /* Restrict the max width for larger screens */
+    text-align: center;
+    background-image: url('images/loginbox.png'); /* Set your login box image here */
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    margin: 1rem; /* Add some margin to prevent cutting off on small screens */
+}
+
+/* Residency Header */
+.residency-header h1 {
+    color: #fff;
+    font-size: 2.5rem; /* Adjust font size to be fluid */
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 3px #ff66ff;
+}
+
+/* Residency Menu Options */
+.residency-options {
+    display: flex;
+    justify-content: space-around; /* Space options evenly */
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Adjust gap between boxes */
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+/* Option Box (for Create and Join) */
+.option-box {
+    background-color: #ffccff;
+    border: 0.25rem solid #000;
+    padding: 1.5rem;
+    width: 10rem; /* Reduce box width for small screens */
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem 0 #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0.5rem 0.5rem 0 #000;
+}
+
+/* Option Box Headings */
+.option-box h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+/* Option Box Paragraph */
+.option-box p {
+    font-size: 0.875rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.residency-btn {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #008CBA;
+    padding: 0.75rem 1.5rem;
+    border: 0.25rem solid #005f7a;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0.25rem 0.25rem 0 #000;
+    transition: all 0.2s ease;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    
+}
+
+.residency-btn:hover {
+    background-color: #005f7a;
+    box-shadow: 0.35rem 0.35rem 0 #000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .option-box {
+        width: 70%; /* Wider box for medium screens */
+        margin-bottom: 1rem;
+    }
+
+    .residency-header h1 {
+        font-size: 2rem; /* Adjust header size for medium screens */
+    }
+
+    .residency-btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .option-box {
+        width: 90%; /* Full width box for small screens */
+    }
+
+    .residency-header h1 {
+        font-size: 1.75rem; /* Smaller font size for very small screens */
+    }
+
+    .option-box h2 {
+        font-size: 1rem;
+    }
+
+    .residency-btn {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+}

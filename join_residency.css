@@ -1,0 +1,136 @@
+/* Full-Screen Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzk0OXE5Mnp2OGI1OTdtdHFiYXVpb2M0ZHlqdGw5OGNsYnJpZDQzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Residency Container */
+.residency-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Residency Box */
+.residency-box {
+    position: relative;
+    background-image: url('images/loginbox.png');
+    width: 30rem;
+    max-width: 90vw;
+    aspect-ratio: 15 / 16;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.close-icon {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+}
+
+.close-btn:hover .close-icon {
+    filter: brightness(0.8);
+}
+
+/* Residency Header */
+.residency-header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 80%;
+    height: 5%;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border: 0.25rem solid #000;
+    background-color: #ffccff;
+    color: #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    box-shadow: 0.25rem 0.25rem 0 #000;
+    border-radius: 0.3125rem;
+}
+
+/* Join Residency Button */
+.residency-btn {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #008CBA;
+    padding: 0.75rem 1.5rem;
+    border: 0.25rem solid #005f7a;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0.25rem 0.25rem 0 #000;
+    transition: all 0.1s ease;
+    border-radius: 0.3125rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Error and Success Messages */
+#error-message, #message {
+    font-size: 1rem;
+    color: red;
+    margin-top: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .residency-header {
+        font-size: 1.75rem;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 1rem;
+    }
+
+    .residency-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .residency-header {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 0.875rem;
+    }
+
+    .residency-btn {
+        margin-top: 0.1rem;
+        font-size: 0.875rem;
+    }
+
+    #error-message, #message {
+        font-size: 0.875rem;
+    }
+}

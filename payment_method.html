@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="create_residency.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="payment-container">
+        <div class="residency-box">
+
+            <!-- Close Button (X) -->
+            <a href="/mjversion/create_residency.html" class="close-btn" aria-label="Go back">
+                <img src="images/backbutton.png" alt="Close" class="close-icon">
+            </a>
+
+            <!-- Payment Method Form -->
+            <div id="step2">
+                <div class="step-header">Payment Details</div>
+                <form id="paymentForm" action="create_residency.php" method="POST">
+                    <label for="payment_method">Select Payment Method:</label>
+                    <select id="payment_method" name="payment_method" required>
+                        <option value="card">Card</option>
+                        <option value="gcash">GCash</option>
+                        <option value="paymaya">PayMaya</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+
+                    <div id="paymentDetails"></div>
+
+                    <button type="submit" class="payment-btn">Submit</button>
+                </form>
+            </div>
+
+            <p id="error-message" style="color: red; display: none;"></p>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="payment_method.js"></script>
+
+</body>
+</html>

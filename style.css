@@ -1,0 +1,156 @@
+/* Full-Screen Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzk0OXE5Mnp2OGI1OTdtdHFiYXVpb2M0ZHlqdGw5OGNsYnJpZDQzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive; /* Pixel-style font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for content */
+.container {
+    text-align: center;
+    padding: 20px; /* Add padding to prevent content from touching the edges on mobile */
+}
+
+/* Title styling */
+h1 {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 16px;
+    color: #FFD700; /* Gold color */
+    margin-bottom: 30px;
+}
+
+/* Pixel-style button */
+.pixel-button {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 20px;
+    padding: 20px 60px;
+    background-color: #FEC529; /* Golden yellow background */
+    color: white; /* Text color */
+    border: 4px solid #D4861F; /* Darker orange border */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 8px 8px 0 0 #C06712, 16px 16px 0 0 #000; /* Pixel-style shadow */
+    transition: all 0.1s ease;
+    display: inline-block;
+}
+
+.pixel-button:hover {
+    background-color: #FFC107; /* Hover effect - lighter yellow */
+}
+
+.pixel-button:active {
+    box-shadow: 4px 4px 0 0 #C06712, 8px 8px 0 0 #000; /* Pressed effect */
+    transform: translate(4px, 4px); /* Moves down to simulate being pressed */
+}
+
+/* Top-right navigation links */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+/* Hide the icons on larger screens */
+nav a i {
+    display: none;
+}
+
+nav a .nav-text {
+    display: inline-block; /* Show the text on larger screens */
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 0 #ff7105;
+}
+
+/* Media Queries for responsiveness */
+
+/* For devices with a max width of 768px (tablets, smaller screens) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px; /* Smaller title for smaller screens */
+    }
+    
+    .pixel-button {
+        font-size: 16px;
+        padding: 15px 40px; /* Adjust button size */
+    }
+    
+    .pixel-button:active {
+        box-shadow: 3px 3px 0 0 #C06712, 6px 6px 0 0 #000; /* Smaller pressed shadow */
+        transform: translate(3px, 3px); /* Adjust press effect for smaller screens */
+    }
+
+    nav {
+        top: 10px; /* Adjust navigation position */
+        right: 15px;
+    }
+
+    nav a {
+        font-size: 12px; /* Smaller font for navigation links */
+    }
+}
+
+/* For devices with a max width of 520px (mobile phones) */
+@media (max-width: 520px) {
+    h1 {
+        font-size: 32px; /* Even smaller title for mobile */
+    }
+
+    .pixel-button {
+        font-size: 14px;
+        padding: 10px 30px; /* Adjust button size for mobile */
+        box-shadow: 4px 4px 0 0 #C06712, 8px 8px 0 0 #000; /* Smaller shadow */
+    }
+
+    .pixel-button:active {
+        box-shadow: 2px 2px 0 0 #C06712, 4px 4px 0 0 #000; /* Even smaller pressed shadow */
+        transform: translate(2px, 2px); /* Adjust press effect for mobile */
+    }
+    nav {
+        display: absolute;
+        top: 15px;
+        right: 10px;
+    }
+
+    /* Show only the icons on mobile */
+    nav a i {
+        display: inline-block;
+        font-size: 32px; /* Increase the icon size */
+        color: #FFD700; /* Gold color for the icons */
+    }
+
+    /* Hide the text on mobile */
+    nav a .nav-text {
+        display: none;
+    }
+
+    nav a {
+        flex: 1;
+        text-align: right;
+        margin: 0 7px; /* Add some space between the icons */
+    }
+}
+    

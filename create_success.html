@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residence Created Successfully</title>
+    <link rel="stylesheet" href="create_residency.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="residency-container">
+        <div class="residency-box">
+            <!-- Success Message -->
+            <h2 class="step-header">Success!</h2>
+            <p class="success-message">Your residence has been successfully created.</p>
+            
+            <!-- Display Assigned Residence ID -->
+            <p class="assigned-id">Residence ID: <span id="residenceId"></span></p>
+            
+            <!-- Continue Button -->
+            <a href="/next-page.html" class="residency-btn">Continue</a>
+        </div>
+    </div>
+
+    <!-- JavaScript to retrieve and display the residence ID -->
+    <script>
+        // Retrieve the residence ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const residenceId = urlParams.get('residence_id');
+        document.getElementById('residenceId').textContent = residenceId || 'N/A';
+    </script>
+</body>
+</html>

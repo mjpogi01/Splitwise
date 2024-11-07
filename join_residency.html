@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Residency</title>
+    <link rel="stylesheet" href="join_residency.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="residency-container">
+        <div class="residency-box">
+            <!-- X Button (image) -->
+            <a href="/" class="close-btn" aria-label="Go back">
+                <img src="images/backbutton.png" alt="Close" class="close-icon">
+            </a>
+            <div class="residency-header">
+                <span>Join Residency</span>
+            </div>
+            <form id="joinForm">
+                <label for="residency_id">Residency ID:</label>
+                <input type="text" id="residency_id" name="residency_id" required>
+
+                <label for="residency_password">Password:</label>
+                <input type="password" id="residency_password" name="residency_password" required>
+
+                <p id="error-message" style="color: red; display: none;"></p>
+                <p id="message" style="color: green; display: none;"></p>
+
+                <button type="submit" class="residency-btn">Join Residency</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="join_residency.js"></script>
+</body>
+</html>

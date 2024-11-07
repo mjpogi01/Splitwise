@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Residency</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="create_residency.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="residency-container">
+        <div class="residency-box">
+
+            <!-- Close Button (X) -->
+            <a href="/" class="close-btn" aria-label="Go back">
+                <img src="images/backbutton.png" alt="Close" class="close-icon">
+            </a>
+
+            <!-- Step 1: Residency Creation Form -->
+            <div id="step1">
+                <div class="step-header">Create Residency</div>
+                <form id="createResidencyForm" action="save_residency_session.php" method="POST">
+                    <label for="residency_name">Residence Name:</label>
+                    <input type="text" id="residency_name" name="residency_name" required>
+
+                    <label for="residency_address">Residence Address:</label>
+                    <input type="text" id="residency_address" name="residency_address" required>
+
+                    <label for="residency_password">Password:</label>
+                    <input type="password" id="residency_password" name="residency_password" required>
+
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+
+                    <!-- Redirect to Payment Page -->
+                    <button type="submit" class="residency-btn">Next: Payment</button>
+                </form>
+            </div>
+
+            <p id="error-message" style="color: red; display: none;"></p>
+
+        </div>
+    </div>
+
+</body>
+</html>

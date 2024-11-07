@@ -1,0 +1,202 @@
+/* Full-Screen Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzk0OXE5Mnp2OGI1OTdtdHFiYXVpb2M0ZHlqdGw5OGNsYnJpZDQzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Common Container Styles */
+.residency-container, .payment-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.residency-box {
+    position: relative;
+    background-image: url('images/loginbox.png');
+    aspect-ratio: 15 / 16;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+/* Step Headers */
+.step-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #000;
+    font-family: 'Press Start 2P', cursive; /* Ensure labels use Player Start 2P font */
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: 80%;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #ffccff;
+    color: #000;
+    border: 0.25rem solid #000;
+    border-radius: 0.3125rem;
+    box-shadow: 0.25rem 0.25rem 0 #000;
+    outline: none;
+    font-family: 'Press Start 2P', cursive; /* Inputs use Player Start 2P font */
+}
+
+/* Radio Buttons */
+/* General alignment for radio buttons and labels */
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5rem 0 0; /* Adjust spacing between radio and label */
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #000;
+    margin: 0; /* Remove extra margin to ensure alignment */
+}
+
+/* Adjustments for smaller screens */
+
+
+
+
+
+/* Buttons */
+.residency-btn, .payment-btn {
+    font-family: 'Press Start 2P', cursive; /* Ensure buttons use Player Start 2P font */
+    background-color: #008CBA;
+    padding: 0.75rem 1.5rem;
+    border: 0.25rem solid #005f7a;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.1s ease;
+    border-radius: 0.3125rem;
+    font-size: 0.8rem;
+}
+
+.residency-btn:active, .payment-btn:active {
+    transform: translate(2px, 2px);
+}
+
+/* Error Message Styling */
+#error-message {
+    color: red;
+    margin-top: 1rem;
+    display: none;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', cursive; /* Ensure error message uses Player Start 2P font */
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.close-icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+.close-btn:hover .close-icon {
+    filter: brightness(0.8);
+}
+
+/* Success Message Styling */
+.success-message {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* Assigned Residence ID Styling */
+.assigned-id {
+    font-size: 1.1rem;
+    color: #ffeb3b;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #000;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    input[type="radio"] + label {
+        font-size: 0.9rem;
+    }
+    .step-header {
+        font-size: 1.75rem;
+    }
+    .close-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    input, select {
+        font-size: 1rem;
+    }
+
+    .residency-btn, .payment-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 467px) {
+    .step-header {
+        font-size: 1.2rem;
+    }
+    .close-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    label{
+        font-size: 0.8rem
+    }
+    input, select {
+        font-size: 0.8rem;
+    }
+    input[type="radio"] + label {
+        font-size: 0.8rem;
+    }
+
+    .residency-btn, .payment-btn {
+        font-size: 0.6rem;
+    }
+}

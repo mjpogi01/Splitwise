@@ -1,0 +1,165 @@
+/* Full-Screen Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzk0OXE5Mnp2OGI1OTdtdHFiYXVpb2M0ZHlqdGw5OGNsYnJpZDQzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    font-family: 'Press Start 2P', cursive; /* Pixel-style font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 0.875rem; /* Smaller font size for labels */
+    font-family: 'Press Start 2P', cursive; /* Keep the same font-family */
+    color: #000; /* Color of the label text */
+}
+
+/* Sign-up Page */
+.signup-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-box {
+    position: relative; /* Make this relative so the close button can be positioned */
+    background-image: url('images/loginbox.png'); /* Your login box background image */
+    width: 30rem;
+    max-width: 90vw;
+    height: auto; /* Allow height to adjust based on content */
+    aspect-ratio: 15 / 16; /* Aspect ratio of the box */
+    text-align: center;
+    background-size: cover; /* Stretch the image to cover the login box */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the box */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-header {
+    margin-top: 0;
+    font-size: 2rem; /* Use rem for consistent scaling */
+    margin-bottom: 2rem; /* Space below header */
+    color: #fff; /* Make header color white for contrast */
+}
+
+input[type="email"], input[type="text"], input[type="password"] {
+    width: 50%;
+    height: 5%;
+    padding: 0.5rem;
+    margin: 0.8rem 0;
+    border: 0.25rem solid #000;
+    background-color: #ffccff;
+    color: #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1rem;
+    box-shadow: 0.25rem 0.25rem 0 #000;
+    border-radius: 0.3125rem;
+}
+
+.signup-btn {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #008CBA; /* Button color */
+    padding: 0.75rem 1.5rem; /* Use rem for button padding */
+    border: 0.25rem solid #005f7a; /* Border styling */
+    color: white; /* Text color for button */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0.25rem 0.25rem 0 #000; /* Button shadow */
+    transition: all 0.1s ease; /* Transition for hover effects */
+    border-radius: 0.3125rem; /* Rounded button */
+    margin-top: 1rem; /* Space above button */
+    font-size: 0.8rem; /* Use rem for button font size */
+}
+
+.signup-box p {
+    font-size: 0.6rem; /* Use rem for small text */
+    color: #000; /* Text color */
+    margin-top: 1.5rem; /* Space above paragraph */
+}
+
+.signup-box a {
+    color: #008CBA; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.6rem; /* Use rem for links */
+}
+
+/* Close Button (X) */
+/* X Button (close) */
+.close-btn {
+    position: absolute;
+    top: 1rem; /* Adjust position from the top */
+    right: 1rem; /* Adjust position from the right */
+    cursor: pointer;
+}
+
+.close-icon {
+    width: 4rem; /* Adjust the size of the close icon */
+    height: 4rem;
+    display: block;
+}
+
+.close-btn:hover .close-icon {
+    filter: brightness(0.8); /* Darken the icon on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .signup-header {
+        font-size: 1.75rem; /* Adjust header font size for tablets */
+    }
+
+    input[type="email"], input[type="text"], input[type="password"] {
+        font-size: 1rem; /* Maintain input font size */
+    }
+
+    .signup-btn {
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .signup-box p,
+    .signup-box a {
+        font-size: 0.75rem; /* Smaller text for links and paragraphs */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 467px) {
+    label {
+        font-size: 0.6rem; /* Smaller font size for labels */
+        font-family: 'Press Start 2P', cursive; /* Keep the same font-family */
+        color: #000; /* Color of the label text */
+    }
+    .signup-header {
+        margin-bottom: 0.5rem; /* Add space below header */
+        font-size: 1.4rem; /* Smaller header font for mobile */
+    }
+
+    input[type="email"], input[type="text"], input[type="password"] {
+        font-size: 0.8rem; /* Smaller input font size */
+        margin: 0.6rem 0;
+        padding: 0.3;
+    }
+
+    .signup-btn {
+        margin-top: 0.5rem;
+        font-size: 0.6rem; /* Smaller button font size */
+        padding: 0.3rem 0.75rem;
+    }
+
+    .signup-box p,
+    .signup-box a {
+        margin-top: 2rem;
+        font-size: 0.5rem; /* Maintain smaller text for links and paragraphs */
+        margin-bottom: 1rem; /* Space below paragraph */
+    }
+}
