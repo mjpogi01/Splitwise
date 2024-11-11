@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitwise Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Burger Menu -->
+    <nav class="burger-menu">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+        <div class="menu">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+            <h2 class="username">Username</h2>
+        </div>
+
+        <!-- Leaderboards -->
+        <div class="leaderboard">
+            <h3>Leaderboards</h3>
+            <p>Points: <span class="points">1500</span></p>
+            <p>Rank: <span class="rank">5</span></p>
+        </div>
+
+        <!-- Residence Management -->
+        <div class="residence-management">
+            <button class="btn view-residence">View Residence</button>
+            <button class="btn join-residence">Join Another Residence</button>
+        </div>
+
+        <!-- Outstanding Balance -->
+        <div class="balance-container">
+            <h3>Outstanding Balance</h3>
+            <p>Amount: $<span class="balance">200</span></p>
+            <p>Deadline: <span class="deadline">30th April 2024</span></p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript for Burger Menu -->
+    <script src="script.js"></script>
+</body>
+</html>
